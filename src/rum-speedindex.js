@@ -328,7 +328,7 @@ A Boomerang implementation of https://github.com/WPO-Foundation/RUM-SpeedIndex
         complete: false,
 
         done: function() {
-            w.BOOMR.addVar('speedindex', Math.round(this.realUserMetricsSpeedIndex(), 0));
+            w.BOOMR.addVar('speedindex', Math.round(this.realUserMetricsSpeedIndex(w.BOOMR.window), 0));
 
             this.complete = true;
 
