@@ -329,8 +329,10 @@ A Boomerang implementation of https://github.com/WPO-Foundation/RUM-SpeedIndex
 
         done: function() {
             w.BOOMR.addVar('speedindex', Math.round(this.realUserMetricsSpeedIndex(), 0));
-            // no need of sendBeacon because we're called when the beacon is being sent
+
             this.complete = true;
+
+            w.BOOMR.sendBeacon();
         }
     };
 
